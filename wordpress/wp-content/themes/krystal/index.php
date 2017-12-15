@@ -35,46 +35,106 @@ get_header(); ?>
 						</div>
 						<div class="index-finance-wrapper index-content">
 							<h2>Finance</h2>
-							<div class="index-finance-content">
-								<div class="index-graph-wraper">
-									<div class="index-graph-box">
-										<div class="index-graph-profit"></div>
-										<div class="index-graph-right">
-											<div class="index-graph-loss"></div>
-											<div class="index-graph-stock"></div>
+
+							<?php
+							$temp = $wp_query;
+							$wp_query = null;
+							$wp_query = new WP_Query();
+							$wp_query->query('post_type=post_finance' . '&paged=' . $paged . '&posts_per_page=1');
+							?>
+							<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+								<h5 class="finance-date mp0"><?php the_title(); ?></h5>
+
+								<div class="index-finance-content">
+									<div class="index-graph-wraper">
+										<div class="index-graph-box">
+											<p class="index-graph-profit" style="height: ">
+												<?  
+												$num = get_field('finance-profits');
+												if($num){ ?>¥<? echo $num; ?>
+												<? } ?>
+											</p>
+											<div class="index-graph-right">
+												<p class="index-graph-loss">
+													<?  
+													$num = get_field('finance-loss');
+													if($num){ ?><? echo $num; ?>
+													<? } ?>
+												</p>
+												<p class="index-graph-stock">
+													<?  
+													$num = get_field('finance-save');
+													if($num){ ?><? echo $num; ?>
+													<? } ?>
+												</p>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="pie-chart" data-px="200" style="width: 50%;">
-									<div class="pie" data-percentage="60" data-color="#42cbcb"></div>
-									<div class="pie" data-percentage="20" data-color="#fe8378"></div>
-									<div class="pie" data-percentage="10" data-color="#57b7db"></div>
-									<div class="pie" data-percentage="10" data-color="#6a8cbb"></div>
-								</div>
-								<div class="index-finance-item">
-									<h4>Profit</h4>
-									<p>¥100,000</p>
-									<h4>Loss</h4>
-									<p>¥100,000</p>
-									<h4>Stock</h4>
-									<p>¥100,000</p>
-								</div>
-							</div>
-						</div>
-						<?php
-						if('right'===esc_attr(get_theme_mod('kr_blog_sidebar','right'))) {
-							?>
-							<?php
-							if ( is_active_sidebar('sidebar-1')){
-								?>
-								<div class="index-blog-wrapper index-content">
-									<h2>What's NEW</h2>
-									<div class="col-md-9">
-										<?php
-										if(have_posts() ) {									
+									<div class="index-finance-item">
+										<h4>Profit</h4>
+										<p>
+											<?  
+											$num = get_field('finance-profits');
+											if($num){ ?>¥<? echo $num; ?>
+											<? } ?>
+										</p>
+										<h4>Loss</h4>
+										<p>¥
+											<?  
+											$num = get_field('finance-loss');
+											if($num){ ?><? echo $num; ?>
+											<? } ?></p>
+											<h4>Stock</h4>
+											<p>¥
+												<?  
+												$num = get_field('finance-save');
+												if($num){ ?><? echo $num; ?>
+												<? } ?></p>
+											</div>
+										</div>
 
-											while(have_posts() ) {
-												the_post();
+										<p>
+											<?  
+											$nump = get_field('finance-profits');
+											$numl = get_field('finance-loss');
+											$nums = get_field('finance-save');
+											if($num){ ?><? echo $numl / $nump * 100;?>
+											<? } ?>
+										</p>
+										<p>
+											<?  
+											$nump = get_field('finance-profits');
+											$numl = get_field('finance-loss');
+											$nums = get_field('finance-save');
+											if($num){ ?><? echo $nums / $nump * 100;?>
+											<? } ?>
+										</p>
+										<p>
+											<?  
+											$nump = get_field('finance-profits');
+											$numl = get_field('finance-loss');
+											$nums = get_field('finance-save');
+											if($num){ ?><? echo $nump/$nump*100;?>
+											<? } ?>
+										</p>
+
+
+									<? endwhile ?>
+								</div>
+								<?php
+								if('right'===esc_attr(get_theme_mod('kr_blog_sidebar','right'))) {
+									?>
+									<?php
+									if ( is_active_sidebar('sidebar-1')){
+										?>
+										<div class="index-blog-wrapper index-content">
+											<h2>What's NEW</h2>
+											<div class="col-md-9">
+												<?php
+												if(have_posts() ) {									
+
+													while(have_posts() ) {
+														the_post();
 																/*
 																 * Include the Post-Format-specific template for the content.
 																 * If you want to override this in a child theme, then include a file
