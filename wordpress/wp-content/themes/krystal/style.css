@@ -1,0 +1,96 @@
+.index-graph-right {
+	width: 30%;
+	height: 190px;
+	display: table-cell;
+}
+.index-graph-stock {
+	height: 30px;
+	width: 100%;	
+	background-color: #31efcd;
+}
+.index-graph-loss {
+	height: 170px;
+	width: 100%;
+	background-color: #2497b3;	
+}
+.index-graph-profit {
+	width: 30%;
+	height: 190px;
+	background-color: #00b6ff;
+	display: table-cell;
+}
+.index-graph-box {
+	width: 50%;
+	height: 200px;
+	display: table;
+}
+.index-content h1,.index-content h2,.index-content h4,.index-content h3,.index-content h5,.index-content h6 {
+	margin: 0;
+	padding: 0;
+}
+.index-content {
+	padding: 15px 20px 30px 15px;
+}
+.index-wig-content,.index-finance-content {
+	padding: 15px 0;
+}
+.index-finance-wrapper h4 {
+	color: white;
+}
+.index-finance-item h4,.index-finance-item p {
+	border-bottom: 1px solid #ffffff78;
+}
+.index-finance-item {
+	padding: 20px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows:auto;
+	text-align: center;
+}
+.index-wig-wrapper h5 {
+	padding-left: 15px;
+}
+.index-wig-wrapper p{
+	padding-left: 30px;
+}
+.index-wig-wrapper,.index-blog-wrapper {
+	background-color: white;
+}
+.index-finance-wrapper {
+	background-color: black;
+	color: white;
+}
+.index-finance-wrapper h2 {
+	color: white;
+}
+article {
+	/*background: #e6e6e6 !important;*/
+	margin: 20px 0 !important;
+}
+.row p {
+	margin: 0;
+}
+.navbar-collapse ul li a {
+	color: white;
+}
+.blog-h3 {
+	margin: 0;
+	padding: 0;
+}
+.single-blog-wrapper {
+	padding: 20px 15px;
+}
+.single-blog-wrapper h3 {
+	margin: 0;
+	padding: 30px 0 15px 0; 
+}
+#categories-2 ul li,#archives-2 ul li {
+	list-style-type: none;
+}
+#categories-2 ul,#archives-2 ul {
+	margin: 0;
+	text-align: center;
+}
+.col-md-3 aside {
+	margin: 0;
+}
