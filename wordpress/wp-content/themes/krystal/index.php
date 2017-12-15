@@ -120,6 +120,8 @@ get_header(); ?>
 
 
 									<? endwhile ?>
+									<?php wp_reset_query(); ?>
+
 								</div>
 								<?php
 								if('right'===esc_attr(get_theme_mod('kr_blog_sidebar','right'))) {
@@ -265,3 +267,13 @@ get_header(); ?>
 				<?php
 
 				get_footer();
+				?>
+
+				<style type="text/css">
+				article {
+					padding: 0 15px;
+				}
+				article .blog-wrapper {
+					padding-top: 15px;
+				}
+			</style>

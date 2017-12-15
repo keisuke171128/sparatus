@@ -14,7 +14,28 @@ get_header();
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-		<?php krystal_get_page_title(true,false,false,false); ?>
+		<?php
+		$image_id = get_post_thumbnail_id();
+		$image_url = wp_get_attachment_image_src($image_id, true);
+		?>
+		<div class="page-title" style="background-image:url(<?php echo $image_url[0]; ?>);background-repeat:no-repeat;background-position: 50% 50%;background-size: cover;">
+
+			<div class="content-section img-overlay">
+				<div class="container">
+					<div class="row text-center">
+						<div class="col-md-12">
+							<div class="section-title page-title"> 
+								<h1 class="main-title"><?php the_title(); ?></h1>
+								<div class="bread-crumb" typeof="BreadcrumbList" vocab="http://schema.org/">
+								</div>                                                           
+							</div>						
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+
 		<div class="content-inner">
 			<div id="blog-section">
 				<div class="container">
@@ -93,5 +114,8 @@ get_footer();
 }
 article {
 	padding: 0 15px;
+}
+.section-title h1 {
+	text-shadow: 3px 3px 3px black;
 }
 </style>
