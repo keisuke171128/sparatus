@@ -21,7 +21,7 @@ get_header(); ?>
 			$temp = $wp_query;
 			$wp_query = null;
 			$wp_query = new WP_Query();
-			$wp_query->query('post_type=post_finance' . '&paged=' . $paged . '&posts_per_page=5');
+			$wp_query->query('post_type=post_finance' . '&paged=' . $paged . '&posts_per_page=3');
 			?>
 			<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 				<div class="page-fonance-content">
