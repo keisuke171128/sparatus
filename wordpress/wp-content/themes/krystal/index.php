@@ -22,15 +22,166 @@ get_header(); ?>
 					<div class="row">
 						<div class="index-wig-wrapper index-content">
 							<h2>WIG</h2>
+
+							<!-- year -->
 							<div class="index-wig-content">
-								<h5>Yearly wig</h5>
-								<p>TYPE somthing.</p>
-								<h5>Monthly wig</h5>
-								<p>TYPE somthing.</p>
-								<h5>Weekly wig</h5>
-								<p>TYPE somthing.</p>
+								<div class="wig-content-item year-box">
+									<?php
+									$args = array(
+										'post_type' => 'post_wig',
+										'taxonomy' => 'wig_cat',
+										'term' => 'wig-year',
+										'posts_per_page' => 1,
+										'numberposts' => '1',
+									);
+									$wig_posts = get_posts($args);
+									foreach ( $wig_posts as $post ) {
+										setup_postdata($post); ?>
+										<?
+										$wig1 = get_field('wig_theme');
+										$wig2 = get_field('wig_lategoal');
+										$wig3 = get_field('wig_lategoal_goal');
+										$wig4 = get_field('wig_lategoal_real');
+										$wig5 = get_field('wig_earlygoal');
+										$wig6 = get_field('wig_earlygoal_goal');
+										$wig7 = get_field('wig_earlygoal_real');
+										$wig8 = get_field('wig_memo');
+										$wiglpc = $wig4/$wig3*100;
+										$wigepc = $wig7/$wig6*100;
+										;?>
+										<div class="wig-year-box">
+											<h5>Yearly wig</h5>
+											<p><span class="wig-title-span"><?php the_title(); ?></span></p>
+											<p class="index-wig-theme"><? echo $wig1; ?></p>
+											<div class="index-wig-graph">
+												<p>遅行指標</p>
+												<p><? echo $wig2; ?></p>
+												<div class="wig-graph-late-box wig-graph-max">
+													<div class="wig-graph-item">
+														<div class="wig-graph-late wig-graoh-p" style="width: <? echo round($wiglpc); ?>%;"><span><? echo round($wiglpc); ?>%</span>
+														</div>	
+													</div>
+												</div>
+												<p>先行指標</p>
+												<p><? echo $wig5; ?></p>
+												<div class="wig-graph-early-box wig-graph-max">
+													<div class="wig-graph-item">
+														<div class="wig-graph-early wig-graoh-p" style="width: <? echo round($wigepc); ?>%;"><span><? echo round($wigepc); ?>%</span>
+														</div>	
+													</div>
+												</div>
+											</div>
+										</div>
+										<?php
+									}?>
+								</div>
+
+								<!-- Monthly -->
+								<div class="wig-content-item month-box">
+									<?php
+									$args = array(
+										'post_type' => 'post_wig',
+										'taxonomy' => 'wig_cat',
+										'term' => 'wig-month',
+										'posts_per_page' => 1,
+										'numberposts' => '1',
+									);
+									$wig_posts = get_posts($args);
+									foreach ( $wig_posts as $post ) {
+										setup_postdata($post); ?>
+										<?
+										$wig1 = get_field('wig_theme');
+										$wig2 = get_field('wig_lategoal');
+										$wig3 = get_field('wig_lategoal_goal');
+										$wig4 = get_field('wig_lategoal_real');
+										$wig5 = get_field('wig_earlygoal');
+										$wig6 = get_field('wig_earlygoal_goal');
+										$wig7 = get_field('wig_earlygoal_real');
+										$wig8 = get_field('wig_memo');
+										$wiglpc = $wig4/$wig3*100;
+										$wigepc = $wig7/$wig6*100;
+										;?>
+										<div class="wig-month-box">
+											<h5>Monthly wig</h5>
+											<p><span class="wig-title-span"><?php the_title(); ?></span></p>
+											<p class="index-wig-theme"><? echo $wig1; ?></p>
+											<div class="index-wig-graph">
+												<p>遅行指標</p>
+												<p><? echo $wig2; ?></p>
+												<div class="wig-graph-late-box wig-graph-max">
+													<div class="wig-graph-item">
+														<div class="wig-graph-late wig-graoh-p" style="width: <? echo round($wiglpc); ?>%;"><span><? echo round($wiglpc); ?>%</span>
+														</div>	
+													</div>
+												</div>
+												<p>先行指標</p>
+												<p><? echo $wig5; ?></p>
+												<div class="wig-graph-early-box wig-graph-max">
+													<div class="wig-graph-item">
+														<div class="wig-graph-early wig-graoh-p" style="width: <? echo round($wigepc); ?>%;"><span><? echo round($wigepc); ?>%</span>
+														</div>	
+													</div>
+												</div>
+											</div>
+										</div>
+										<?php
+									}?>
+								</div>
+
+								<!-- Weekly -->
+								<div class="wig-content-item week-box">
+									<?php
+									$args = array(
+										'post_type' => 'post_wig',
+										'taxonomy' => 'wig_cat',
+										'term' => 'wig-week',
+										'posts_per_page' => 1,
+										'numberposts' => '1',
+									);
+									$wig_posts = get_posts($args);
+									foreach ( $wig_posts as $post ) {
+										setup_postdata($post); ?>
+										<?
+										$wig1 = get_field('wig_theme');
+										$wig2 = get_field('wig_lategoal');
+										$wig3 = get_field('wig_lategoal_goal');
+										$wig4 = get_field('wig_lategoal_real');
+										$wig5 = get_field('wig_earlygoal');
+										$wig6 = get_field('wig_earlygoal_goal');
+										$wig7 = get_field('wig_earlygoal_real');
+										$wig8 = get_field('wig_memo');
+										$wiglpc = $wig4/$wig3*100;
+										$wigepc = $wig7/$wig6*100;
+										;?>
+										<div class="wig-week-box">
+											<h5>Weekly wig</h5>
+											<p><span class="wig-title-span"><?php the_title(); ?></span></p>
+											<p class="index-wig-theme"><? echo $wig1; ?></p>
+											<div class="index-wig-graph">
+												<p>遅行指標</p>
+												<p><? echo $wig2; ?></p>
+												<div class="wig-graph-late-box wig-graph-max">
+													<div class="wig-graph-item">
+														<div class="wig-graph-late wig-graoh-p" style="width: <? echo round($wiglpc); ?>%;"><span><? echo round($wiglpc); ?>%</span>
+														</div>	
+													</div>
+												</div>
+												<p>先行指標</p>
+												<p><? echo $wig5; ?></p>
+												<div class="wig-graph-early-box wig-graph-max">
+													<div class="wig-graph-item">
+														<div class="wig-graph-early wig-graoh-p" style="width: <? echo round($wigepc); ?>%;"><span><? echo round($wigepc); ?>%</span>
+														</div>	
+													</div>
+												</div>
+											</div>
+										</div>
+										<?php
+									}?>
+								</div>
 							</div>
 						</div>
+
 						<div class="index-finance-wrapper index-content">
 							<h2>Finance</h2>
 

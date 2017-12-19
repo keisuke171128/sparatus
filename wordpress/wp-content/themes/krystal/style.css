@@ -1,3 +1,42 @@
+.page-wig-year-box {
+	padding: 10px;
+	-webkit-box-shadow: 0px 0px 3px 0px #c5c5c5;
+	margin-bottom: 30px;
+}
+.single-other-title {
+	font-size: 12px !important;
+}
+.single-other-contentbox {
+	padding: 20px 0;
+}
+.page-blog-item-bos h3 {
+	margin: 0;
+	padding: 5px 0;
+}
+.page-blog-item-bos p {
+	margin: 0;
+	padding: 10px 0;
+}
+.page-blog-item-bos {
+	padding: 10px;
+	-webkit-box-shadow: 0px 0px 3px 0px #c5c5c5;
+}
+.index-wig-theme {
+	color: #029c9e;
+	font-weight: bold;
+}
+.wig-content-item {
+	padding-bottom: 20px;
+}
+.wig-graph-item {
+	background-color: black;
+}
+.index-wig-graph {
+	width: 100%;
+}
+.wig-title-box h4 {
+	margin-bottom: 20px;
+}
 .wig-content-text p {
 	font-size: 15px;
 	line-height: 30px;
@@ -18,10 +57,11 @@
 	width: 100%;
 	max-width: 700px;
 	height: 40px;
-	background-color: black;
+	/*	background-color: black;*/
 	margin: 10px auto;
+	padding-left: 30px;
 }
-.other-image img {
+.other-image img,.wig-image img {
 	height: auto;
 }
 .page-title-finance {

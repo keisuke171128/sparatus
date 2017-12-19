@@ -44,7 +44,7 @@ get_header(); ?>
 						the_post_thumbnail('full');
 						?>
 					</div>
-					<p><?php the_time('Y年m月d日'); ?></p>
+					
 					<p><?php the_title(); ?></p>
 					<?
 					$wig1 = get_field('wig_theme');
@@ -54,19 +54,25 @@ get_header(); ?>
 					$wig5 = get_field('wig_earlygoal');
 					$wig6 = get_field('wig_earlygoal_goal');
 					$wig7 = get_field('wig_earlygoal_real');
-					$wigepc = $wig4/$wig3*100;
-					$wiglpc = $wig7/$wig6*100;
+					$wig8 = get_field('wig_memo');
+					$wiglpc = $wig4/$wig3*100;
+					$wigepc = $wig7/$wig6*100;
 					;?>
 					<div class="wig-title-box">
 						<h4 class="mp0"><? echo $wig1; ?></h4>
 					</div>
 
 					<div class="wig-graph-wrapper">
+						<p class="mp0">遅行指標</p>
 						<div class="wig-graph-late-box wig-graph-max">
-							<div class="wig-graph-late wig-graoh-p" style="width: <? echo round($wigepc); ?>%;"><span><? echo round($wigepc); ?>%</span></div>	
+							<div class="wig-graph-item">
+								<div class="wig-graph-late wig-graoh-p" style="width: <? echo round($wiglpc); ?>%;"><span><? echo round($wiglpc); ?>%</span>
+								</div>	
+							</div>
 						</div>
+						<p class="mp0">先行指標</p>
 						<div class="wig-graph-early-box wig-graph-max">
-							<div class="wig-graph-early wig-graoh-p" style="width: <? echo round($wiglpc); ?>%;"><span><? echo round($wiglpc); ?>%</span></div>	
+							<div class="wig-graph-early wig-graoh-p" style="width: <? echo round($wigepc); ?>%;"><span><? echo round($wigepc); ?>%</span></div>	
 						</div>
 						<div class="wig-content-text">					
 
@@ -85,6 +91,7 @@ get_header(); ?>
 							<p class="mp0">先行指標-実績：<? echo $wig7; ?></p>
 
 							<p class="mp0">先行指標-実績：<? echo round($wigepc); ?>%</p>
+
 						</div>
 					</div>
 				</div>

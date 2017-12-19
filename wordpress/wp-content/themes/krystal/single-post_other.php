@@ -11,10 +11,6 @@ get_header();
 
 ?>
 
-
-
-
-
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 		<div class="page-title-other" style="background-image:url(<? the_post_thumbnail_url( 'medium' ); ?>);background-size: cover;background-position: center center;background-repeat: no-repeat;">
@@ -43,13 +39,14 @@ get_header();
 						$temp = $wp_query;
 						$wp_query = null;
 						$wp_query = new WP_Query();
-						$wp_query->query('post_type=post_other' . '&paged=' . $paged . '&posts_per_page=5');
+						$wp_query->query('post_type=post_other' . '&paged=' . $paged . '&posts_per_page=1');
 						?>
 						<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 							<div class="single-fonance-content">
-								<p><?php the_time('Y年m月d日'); ?></p>
-								<p><?php the_title(); ?></p>
-								<p><?php the_content(); ?></p>
+								<p class="single-other-title"><?php the_time('Y年m月d日'); ?></p>
+								<div class="single-other-contentbox">
+									<?php the_content(); ?>
+								</div>
 							</div>
 						<? endwhile ?>
 					</div>
