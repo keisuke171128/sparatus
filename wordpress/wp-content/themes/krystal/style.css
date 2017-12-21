@@ -1,8 +1,20 @@
-.page-blog-con-w,.page-other-con-w {
+.index-wig-graph .wig-graph-max {
+	margin: 5px auto;
+}
+.index-con-w {
+	text-align: center;
+}
+#slider-inner {
+	background-image: url('http://sparatus.wp.xdomain.jp/wp-content/uploads/2017/12/cat-1.jpg') !important;
+}
+.site-title a,.site-description,.navbar-toggle,#menu-topmenu-1 li a {
+	text-shadow: 3px 3px 3px black;
+}
+.index-con-w,.page-blog-con-w,.page-other-con-w {
 	max-width: 960px;
 	margin: 0 auto;
 }
-.page-blog-con,.page-other-con {
+.page-blog-con,.page-other-con,.col-md-9 {
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: auto;	
@@ -15,7 +27,7 @@
 }
 .page-finance-con,.page-other-con,.page-wig-con {
 	width: 100%;
-	max-width: 500px;
+	max-width: 700px;
 	margin: 0 auto;	
 }
 .graph-green {
@@ -84,10 +96,10 @@
 }
 .wig-graph-max {
 	width: 100%;
-	max-width: 700px;
+	max-width: 500px;
 	height: 40px;
-	margin: 5px auto;
-	padding-left: 30px;
+/*	margin: 5px auto;*/
+/*	padding-left: 30px;*/
 }
 .other-image img,.wig-image img {
 	height: auto;
@@ -211,7 +223,7 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
 	padding-left: 15px;
 }
 .index-wig-wrapper p{
-	padding-left: 30px;
+/*	padding-left: 30px;*/
 }
 .index-wig-wrapper,.index-blog-wrapper {
 	background-color: white;
