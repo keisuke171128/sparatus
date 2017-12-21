@@ -92,7 +92,10 @@ a {text-decoration: none;
     outline: none;
 }
 
-img {max-width: 100%;}
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 
 ol, ul {
@@ -236,7 +239,7 @@ small {
 */
 
 .alignnone {
-    margin: 5px 20px 20px 0;
+    /*margin: 5px 20px 20px 0;*/
 }
 
 .aligncenter,
@@ -1049,7 +1052,7 @@ form.searchform input#searchsubmit,form.searchform label.search-icon{
 */
 
 .searchpage .content-area{
-    margin: 70px 0;
+/*    margin: 70px 0;*/
 }
 
 .searchpage .content-area article{

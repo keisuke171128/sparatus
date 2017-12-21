@@ -15,7 +15,7 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-		<div class="page-title-other" style="background-image:url(http://sparatus.wp.xdomain.jp/wp-content/uploads/2017/12/business-2089533_1280.jpg);background-size: cover;background-position: center center;background-repeat: no-repeat;">
+		<div class="page-title-other" style="background-image:url(http://sparatus.wp.xdomain.jp/wp-content/uploads/2017/12/workspace-766045_1280.jpg);background-size: cover;background-position: center center;background-repeat: no-repeat;">
 			<div class="content-section img-overlay">
 				<div class="container">
 					<div class="row text-center">

@@ -15,7 +15,21 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-		<?php krystal_get_page_title(false,false,false,false); ?>
+		<div class="page-title-other" style="background-image:url(http://sparatus.wp.xdomain.jp/wp-content/uploads/2017/12/stock-1863880_1280.jpg);background-size: cover;background-position: center center;background-repeat: no-repeat;">
+			<div class="content-section img-overlay">
+				<div class="container">
+					<div class="row text-center">
+						<div class="col-md-12">
+							<div class="section-title page-title"> 
+								<h1 class="main-title"><?php the_title(); ?></h1>
+								<div class="bread-crumb" typeof="BreadcrumbList" vocab="http://schema.org/">
+								</div>                                                           
+							</div>						
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
 		<div class="page-finance-wrapper">
 			<?php
 			$temp = $wp_query;
