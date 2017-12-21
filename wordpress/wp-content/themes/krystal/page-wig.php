@@ -126,7 +126,6 @@ get_header(); ?>
 							
 						} else {
 							$wigepc2 = ($wig10/$wig9)*100;
-							$wigepc3 = ($wig13/$wig12)*100;
 							?>
 							<p class="mp0">先行指標（2）</p>
 							<div class="wig-graph-early-box wig-graph-max">
@@ -140,6 +139,7 @@ get_header(); ?>
 							<?php if (empty($wig11)) {
 								
 							} else {
+								$wigepc =  ($wig12/$wig13)*100;
 								?>
 								<p class="mp0">先行指標（3）</p>
 								<div class="wig-graph-early-box wig-graph-max">
@@ -179,7 +179,6 @@ get_header(); ?>
 										
 									} else {
 										$wigepc2 = ($wig10/$wig9)*100;
-										$wigepc3 = ($wig13/$wig12)*100;
 										?>
 										<div class="wig-content-item-early2">
 											<h5 class="mp0">先行指標（2）<? echo $wig8; ?></h5>
@@ -196,7 +195,6 @@ get_header(); ?>
 									<?php if (empty($wig11)) {
 										
 									} else {
-										$wigepc2 = ($wig10/$wig9)*100;
 										$wigepc3 = ($wig13/$wig12)*100;
 										?>
 										<div class="wig-content-item-early3">
