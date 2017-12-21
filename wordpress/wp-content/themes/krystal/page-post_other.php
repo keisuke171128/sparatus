@@ -30,29 +30,30 @@ get_header(); ?>
 				</div>	
 			</div>
 		</div>
-		<div class="page-finance-wrapper">
-			<?php
-			$temp = $wp_query;
-			$wp_query = null;
-			$wp_query = new WP_Query();
-			$wp_query->query('post_type=post_other' . '&paged=' . $paged . '&posts_per_page=5');
-			?>
-			<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-				<div class="page-fonance-content">
-					<a href="<?php the_permalink() ?>">
-						<div class="other-image">
-							<?php
-							the_post_thumbnail('full');
-							?>
+		<div class="page-other-wrapper">
+			<div class="page-other-con-w">
+				<div class="page-other-con">
+					<?php
+					$temp = $wp_query;
+					$wp_query = null;
+					$wp_query = new WP_Query();
+					$wp_query->query('post_type=post_other' . '&paged=' . $paged . '&posts_per_page=5');
+					?>
+					<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+						<div class="page-fonance-content">
+							<a href="<?php the_permalink() ?>">
+								<div class="other-image">
+									<?php
+									the_post_thumbnail('full');
+									?>
+								</div>
+								<p><?php the_time('Y年m月d日'); ?></p>
+								<p><?php the_title(); ?></p>
+							</a>
 						</div>
-						<p><?php the_time('Y年m月d日'); ?></p>
-						<p><?php the_title(); ?></p>
-					</a>
+					<? endwhile ?>
 				</div>
-
-			<? endwhile ?>
-
-
+			</div>
 		</div>
 	</main>
 </div>

@@ -1,6 +1,6 @@
 
 @media only screen and (max-width: 320px){    
-    
+
     .blog-wrapper .meta{
         margin-bottom: 5px;
     }
@@ -81,9 +81,11 @@
     }
     
 }
-
+/*sumaho*/
 @media only screen and (max-width: 767px) {    
-
+    .page-blog-con,.page-other-con {
+        display: block;
+    }
     header .custom-logo-link img{
         height: 50px;
         margin-top: 10px !important;
@@ -111,7 +113,7 @@
         -webkit-box-shadow:none;
         box-shadow:none;
         border: 0;
-     }
+    }
 
     .nav ul ul{
         margin-left: 30px;
@@ -140,66 +142,66 @@
     }
 
     .nav li:last-child ul ul,.nav li:nth-last-child(2) ul ul{
-         left: 200px;
-    }   
+       left: 200px;
+   }   
 
-    header.menu-wrapper.fixed a{
-        font-size: 13px;
-    }
+   header.menu-wrapper.fixed a{
+    font-size: 13px;
+}
 
-    .dropdown-menu > li > a{
-        padding: 10px 10px;
-    }
+.dropdown-menu > li > a{
+    padding: 10px 10px;
+}
 
 
-    header .custom-logo-link img{
-        margin: 0;
-        margin-left: 20px;
-    }
+header .custom-logo-link img{
+    margin: 0;
+    margin-left: 20px;
+}
 
-    header #logo-alt img{
-        margin-left: 20px;
-    }
+header #logo-alt img{
+    margin-left: 20px;
+}
 
-    header .navbar-collapse li{
-        padding: 0;
-    }
+header .navbar-collapse li{
+    padding: 0;
+}
 
-    .about-section .content{
-        text-align: center;
-    }
+.about-section .content{
+    text-align: center;
+}
 
-    .about-section .content .title{
-        text-align: center !important;
-    }
+.about-section .content .title{
+    text-align: center !important;
+}
 
-    .about-section .content .content{
-        margin-bottom: 30px;
-    }
+.about-section .content .content{
+    margin-bottom: 30px;
+}
 
-    .about-section .content .image{
-        margin-bottom: 30px;
-    }    
+.about-section .content .image{
+    margin-bottom: 30px;
+}    
 
-    .site-description{
-        margin-left: 20px;
-    }
+.site-description{
+    margin-left: 20px;
+}
 
-    .site-title{
-        margin-left: 20px !important
-    }
+.site-title{
+    margin-left: 20px !important
+}
 
-    [class^="imghvr-"] > img, [class*=" imghvr-"] > img{
-        height: 100%;
-    }
+[class^="imghvr-"] > img, [class*=" imghvr-"] > img{
+    height: 100%;
+}
 
-    ul.nav{
-        margin-left: 0;
-    }
+ul.nav{
+    margin-left: 0;
+}
 
-    footer .widget-title{
-        margin-top: 50px;
-    }    
+footer .widget-title{
+    margin-top: 50px;
+}    
 
 }    
 

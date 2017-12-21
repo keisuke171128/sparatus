@@ -41,57 +41,59 @@ get_header();
 				<div class="container">
 					<div class="row">
 						<div class="single-blog-wrapper">
-							<p><?php the_time('Y年m月d日'); ?></p>
-							<?  
-							$txt = get_field('blog-todaysgoal');
-							if($txt){ ?>
-							<h3>Today's GOAL</h3>
-							<p><? echo $txt; ?></p>
-							<? } ?>
-							<?  
-							$area = get_field('blog-todaystasks');
-							if($area){ ?>
-							<h3>Today's Tasks</h3>
-							<p><? echo $area; ?></p>
-							<? } ?>
-							<?  
-							$area = get_field('blog-good');
-							if($area){ ?>
-							<h3>Good</h3>
-							<p><? echo $area; ?></p>
-							<? } ?>
-							<?  
-							$area = get_field('blog-bad');
-							if($area){ ?>
-							<h3>Bad</h3>
-							<p><? echo $area; ?></p>
-							<? } ?>
-							<?  
-							$area = get_field('blog-learnings');
-							if($area){ ?>
-							<h3>Learnings</h3>
-							<p><? echo $area; ?></p>
-							<? } ?>
-							<?  
-							$area = get_field('blog-next');
-							if($area){ ?>
-							<h3>Next</h3>
-							<p><? echo $area; ?></p>
-							<? } ?>
+							<div class="single-blog-con">
+								<p><?php the_time('Y年m月d日'); ?></p>
+								<?  
+								$txt = get_field('blog-todaysgoal');
+								if($txt){ ?>
+								<h3>Today's GOAL</h3>
+								<p><? echo $txt; ?></p>
+								<? } ?>
+								<?  
+								$area = get_field('blog-todaystasks');
+								if($area){ ?>
+								<h3>Today's Tasks</h3>
+								<p><? echo $area; ?></p>
+								<? } ?>
+								<?  
+								$area = get_field('blog-good');
+								if($area){ ?>
+								<h3>Good</h3>
+								<p><? echo $area; ?></p>
+								<? } ?>
+								<?  
+								$area = get_field('blog-bad');
+								if($area){ ?>
+								<h3>Bad</h3>
+								<p><? echo $area; ?></p>
+								<? } ?>
+								<?  
+								$area = get_field('blog-learnings');
+								if($area){ ?>
+								<h3>Learnings</h3>
+								<p><? echo $area; ?></p>
+								<? } ?>
+								<?  
+								$area = get_field('blog-next');
+								if($area){ ?>
+								<h3>Next</h3>
+								<p><? echo $area; ?></p>
+								<? } ?>
 
-							<?  
-							$txt = get_field('blog-tomorrowsgoal');
-							if($txt){ ?>
-							<h3>Tomorrows GOAL</h3>
-							<p><? echo $txt; ?></p>
-							<? } ?>
+								<?  
+								$txt = get_field('blog-tomorrowsgoal');
+								if($txt){ ?>
+								<h3>Tomorrows GOAL</h3>
+								<p><? echo $txt; ?></p>
+								<? } ?>
 
-							<?  
-							$area = get_field('blog-free');
-							if($area){ ?>
-							<h3>Free</h3>
-							<p><? echo $area; ?></p>
-							<? } ?>
+								<?  
+								$area = get_field('blog-free');
+								if($area){ ?>
+								<h3>Free</h3>
+								<p><? echo $area; ?></p>
+								<? } ?>
+							</div>
 						</div>
 					</div>
 				</div>

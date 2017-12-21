@@ -34,21 +34,22 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<div class="single-blog-wrapper">
-
-						<?php
-						$temp = $wp_query;
-						$wp_query = null;
-						$wp_query = new WP_Query();
-						$wp_query->query('post_type=post_other' . '&paged=' . $paged . '&posts_per_page=1');
-						?>
-						<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-							<div class="single-fonance-content">
-								<p class="single-other-title"><?php the_time('Y年m月d日'); ?></p>
-								<div class="single-other-contentbox">
-									<?php the_content(); ?>
+						<div class="single-other-con">
+							<?php
+							$temp = $wp_query;
+							$wp_query = null;
+							$wp_query = new WP_Query();
+							$wp_query->query('post_type=post_other' . '&paged=' . $paged . '&posts_per_page=1');
+							?>
+							<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+								<div class="single-fonance-content">
+									<p class="single-other-title"><?php the_time('Y年m月d日'); ?></p>
+									<div class="single-other-contentbox">
+										<?php the_content(); ?>
+									</div>
 								</div>
-							</div>
-						<? endwhile ?>
+							<? endwhile ?>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -30,31 +30,34 @@ get_header(); ?>
 				</div>	
 			</div>
 		</div>
-		<div class="page-finance-wrapper">
-			<?php
-			$temp = $wp_query;
-			$wp_query = null;
-			$wp_query = new WP_Query();
-			$wp_query->query('post_type=post' . '&paged=' . $paged . '&posts_per_page=5');
-			?>
-			<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+		<div class="page-blog-wrapper">
+			<div class="page-blog-con-w">
+				<div class="page-blog-con">
+					<?php
+					$temp = $wp_query;
+					$wp_query = null;
+					$wp_query = new WP_Query();
+					$wp_query->query('post_type=post' . '&paged=' . $paged . '&posts_per_page=5');
+					?>
+					<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 
-				<div class="page-blog-item-bos">
-					<a href="<?php the_permalink() ?>">
-						<div class="wig-image">
-							<?php
-							the_post_thumbnail('full');
-							?>
+						<div class="page-blog-item-bos">
+							<a href="<?php the_permalink() ?>">
+								<div class="wig-image">
+									<?php
+									the_post_thumbnail('full');
+									?>
+								</div>
+								<div class="page-blog-content">
+									<p><?php the_time('Y年m月d日'); ?></p>
+									<h3><?php the_title(); ?></h3>
+								</div>
+							</a>
 						</div>
-						<div class="page-blog-content">
-							<p><?php the_time('Y年m月d日'); ?></p>
-							<h3><?php the_title(); ?></h3>
-						</div>
-					</div>
-				</a>
-			<? endwhile ?>
-
-
+						
+					<? endwhile ?>
+				</div>
+			</div>
 		</div>
 	</main>
 </div>
