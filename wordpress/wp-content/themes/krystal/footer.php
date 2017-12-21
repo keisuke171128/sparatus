@@ -84,14 +84,9 @@
                 ?>
             </div>
 
-            <?php
-              /**
-               * Hook - krystal_action_footer.
-               *
-               * @hooked krystal_footer_copyrights - 10
-               */
-              do_action( 'krystal_action_footer' );
-            ?>        	
+            <div class="copyrights">
+                <p>2017.12/21</p>
+            </div>
             
         </div>
     </footer>

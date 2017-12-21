@@ -83,8 +83,14 @@
 }
 /*sumaho*/
 @media only screen and (max-width: 767px) {    
+    .other-image img {
+        margin-bottom: 15px;
+    }
+.page-fonance-content {
+    padding: 5px;
+}
     .page-blog-con,.page-other-con {
-        display: block;
+     /*   display: block;*/
     }
     header .custom-logo-link img{
         height: 50px;
