@@ -1,3 +1,6 @@
+.index-finance-wrapper h2 {
+	text-align: center;
+}
 .index-wig-graph .wig-graph-max {
 	margin: 5px auto;
 }
@@ -14,7 +17,7 @@
 	max-width: 960px;
 	margin: 0 auto;
 }
-.page-blog-con,.page-other-con,.col-md-9 {
+.page-blog-con,.page-other-con {
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: auto;	
@@ -213,7 +216,7 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
 	color: white;
 }
 .index-finance-item {
-	padding: 20px;
+	padding: 15px;
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-template-rows:auto;

@@ -82,15 +82,18 @@
     
 }
 /*sumaho*/
-@media only screen and (max-width: 767px) {    
+@media only screen and (max-width: 767px) {  
+    .index-con-w {
+        text-align: left;
+    }
+    .index-finance-wrapper h2 {
+        text-align: left;
+    }
     .other-image img {
         margin-bottom: 15px;
     }
-.page-fonance-content {
-    padding: 5px;
-}
-    .page-blog-con,.page-other-con {
-     /*   display: block;*/
+    .page-fonance-content {
+        padding: 5px;
     }
     header .custom-logo-link img{
         height: 50px;
@@ -148,10 +151,10 @@
     }
 
     .nav li:last-child ul ul,.nav li:nth-last-child(2) ul ul{
-       left: 200px;
-   }   
+     left: 200px;
+ }   
 
-   header.menu-wrapper.fixed a{
+ header.menu-wrapper.fixed a{
     font-size: 13px;
 }
 
